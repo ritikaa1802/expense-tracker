@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Expense Tracker</h2>
+    <p class="subtitle">Manage your money wisely 💼</p>
+
+    <!-- Summary Cards -->
+    <div class="summary">
+      <div class="card">
+        <h3>Balance</h3>
+        <p id="balance">₹0.00</p>
+      </div>
+      <div class="card">
+        <h3>Income</h3>
+        <p id="income">₹0.00</p>
+      </div>
+      <div class="card">
+        <h3>Expense</h3>
+        <p id="expense">₹0.00</p>
+      </div>
+    </div>
+
+    <!-- Add Transaction -->
+    <h3>Add Transaction</h3>
+    <form id="transaction-form">
+      <input type="text" id="desc" placeholder="Description" required>
+      <input type="number" id="amount" placeholder="Amount" required>
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+        <option value="investment">Investment</option>
+      </select>
+
+      <input list="categories" id="category" placeholder="Enter or choose category">
+      <datalist id="categories">
+        <option value="Food">
+        <option value="Travel">
+        <option value="Shopping">
+        <option value="Bills">
+        <option value="Mutual Fund">
+        <option value="SIP">
+        <option value="FD">
+        <option value="Salary">
+        <option value="Rent">
+        <option value="Freelance">
+        <option value="Interest">
+        <option value="Business">
+      </datalist>
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- Transaction History -->
+    <div class="transaction-section">
+      <h3>Transaction History</h3>
+      <div class="table-top">
+        <input type="text" id="search" placeholder="Search by description or category">
+        <button id="export">Export to CSV</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="transaction-list">
+          <!-- Transactions will appear here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
