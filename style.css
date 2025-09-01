@@ -141,13 +141,19 @@ form button:hover {
   background: #0056b3;
 }
 
-/* Transaction Table */
-table {
+/* ✅ Transaction Table Responsive */
+.transaction-history {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.transaction-history table {
   width: 100%;
   border-collapse: collapse;
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
+  min-width: 600px; /* Columns cut na ho */
 }
 
 table thead {
@@ -181,7 +187,7 @@ select, input[list] {
 /* ✅ Responsive Design */
 @media (max-width: 768px) {
   .container {
-    width: 95%;   /* Mobile pe almost full */
+    width: 95%;
     padding: 15px;
   }
 
@@ -196,6 +202,6 @@ select, input[list] {
 
   .table-top button {
     width: 100%;
-    margin-left:0;
-}
+    margin-left: 0;
+  }
 }
