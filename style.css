@@ -175,5 +175,27 @@ select, input[list] {
   color: black;
   border: 1px solid #ccc;
   border-radius: 6px;
-   padding:6px;
+  padding: 6px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;   /* Mobile pe almost full */
+    padding: 15px;
+  }
+
+  .summary {
+    flex-direction: column;
+  }
+
+  .table-top {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .table-top button {
+    width: 100%;
+    margin-left:0;
+}
 }
